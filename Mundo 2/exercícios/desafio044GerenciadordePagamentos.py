@@ -20,4 +20,7 @@ elif opcao == 3:
     total = preco
     parcela = total / 2
     print('Sua compra será parcelada em 2x de R${:.2f}'.format(parcela))
-print('Sua compra de R${:.2f} vai custar R${:.2f}'.format(preco, total))
+elif opcao == 4:
+    total = preco + (preco * 20 / 100)
+    parcela = total / 3
+    print('Sua compra de R${:.2f} será paracela em 3x de R${:.2f}'.format(preco, parcela))
