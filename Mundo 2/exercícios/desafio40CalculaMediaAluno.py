@@ -11,7 +11,7 @@ nota2 = float(input('Digite a segunda nota: '))
 
 soma = (nota1 + nota2)
 media = soma / 2
-print('{} é a somada de  nota 1 e nota 2, média {}'.format(soma, media))
+print('{} é a somada de  nota 1 e nota 2, média {:.2}'.format(soma, media))
 
 if media <= 5.0:
     print('REPROVADO!')

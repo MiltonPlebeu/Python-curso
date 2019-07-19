@@ -9,7 +9,7 @@
 peso = float(input('Qual é seu peso (Kg) ?'))
 altura = float(input('Qual é sua altura (m) ?'))
 
-imc = peso / (altura ** 2)
+imc = peso / (altura ** 2) #o calculo do IMC é a divisão do peso por alrura ao quadrado.
 print('O IMC dessa pessoa é de {:.1f}'.format(imc))
 
 if imc < 18.5:

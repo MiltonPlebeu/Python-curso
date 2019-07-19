@@ -1,23 +1,52 @@
-from random import choice
+from random import randint
+from time import sleep
+import emoji
 
-print('{:=^100}'.format('\033[1;31;m Play Jokempô \033[m'))
-print("""
-[1] PEDRA
-[2] PAPEL
-[3] TESOURA
+
+print('{:=^100}'.format("\033[1;31;m Play Jokempô \033[m" + emoji.emojize("\033[1;31;m :sunglasses: \033[m", use_aliases=True)))
+print("""Suas opções:
+[0] PEDRA
+[1] PAPEL
+[2] TESOURA
 """)
-opcao = int(input('ESCOLHA UMA OPÇÃO:'))
+lista = ['PEDRA', 'PAPEL', 'TESOURA']
+computador = randint(0, 2)
+jogador = int(input('ESCOLHA UMA OPÇÃO:'))
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO!!!')
+sleep(1)
 
-lista = ['1', '2', '3']
-escolhadopc = choice(lista)
-print('Escolha do Computador >>> {}'.format(escolhadopc))
-
-if opcao == 1 and escolhadopc == 2:
-    print('O computador venceu por ter escolhido PAPEL')
-
-elif opcao == 1 and escolhadopc == 3:
-    print('Você venceu por ter escolhido a PEDRA')
-else:
-    print('Tente novamente')
-
-
+print("-=" * 14)
+print('O computador escolheu: \033[1;31;m {} \033[m'.format(lista[computador]))
+print('O jogador escolheu: \033[1;31;m {} \033[m'.format(lista[jogador]))
+print("-=" * 14)
+if computador == 0: # computador jogou PEDRA
+    if jogador == 0:
+        print('EMPATE!')
+    elif jogador == 1:
+        print("VITÓRIA DO JOGADOR!")
+    elif jogador == 2:
+        print("VITÓRIA DO COMPUTADOR!")
+    else:
+        print("JOGADA INVÁLIDA!")
+elif computador == 1: # computador jogou PAPEL
+    if jogador == 1:
+        print('EMPATE!')
+    elif jogador == 0:
+        print("VITÓRIA DO COMPUTADOR!")
+    elif jogador == 2:
+        print("VITÓRIA DO JOGADOR!")
+    else:
+        print("JOGADA INVÁLIDA!")
+elif computador == 2:
+    if jogador == 2:
+        print('EMPATE!')
+    elif jogador == 0:
+        print("VITÓRIA DO JOGADOR!")
+    elif jogador == 1:
+        print("VITÓRIA DO COMPUTADOR!")
+    else:
+        print("JOGADA INVÁLIDA!")

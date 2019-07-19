@@ -18,12 +18,14 @@ if idade == 18:
 elif idade < 18:
     tempo = 18 - idade
     print('Você ainda não tem 18 anos. Faltam {} anos para o seu alistamento'. format(tempo))
-    
-    print('Seu alistamento será em {}'.format())
+    previsao = atual + tempo
+    print('Seu alistamento será em {}'.format(previsao))
 
 elif idade > 18:
     tempo = idade -18
     print('Voce ja deveria ter se alistado ah {} anos'.format(tempo))
+    previsao = atual - tempo
+    print('Seu alistamento foi em {}'.format(previsao))
 
 
 

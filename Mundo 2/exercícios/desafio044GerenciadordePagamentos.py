@@ -22,5 +22,10 @@ elif opcao == 3:
     print('Sua compra será parcelada em 2x de R${:.2f}'.format(parcela))
 elif opcao == 4:
     total = preco + (preco * 20 / 100)
-    parcela = total / 3
-    print('Sua compra de R${:.2f} será paracela em 3x de R${:.2f}'.format(preco, parcela))
+    totalparc = int(input('Quantas parcelas? '))
+    parcela = total / totalparc
+    print('Sua compra de R${:.2f} será parcelada em {}x de R${:.2f}'.format(preco, totalparc, parcela))
+else:
+    total = preco
+    print('OPÇÃO INVÁLIDA! TENTE NOVAMENTE!')
+print('Sua compra de R${:.2f} vai custar R${:.2f} ao final'.format(preco, total))
